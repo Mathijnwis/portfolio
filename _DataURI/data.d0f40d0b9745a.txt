@@ -1,0 +1,1 @@
+chrome-extension://dgjbaljgolmlcmmklmmeafecikidmjpi/rulesets/scripting/specific/hrv-0.js

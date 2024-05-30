@@ -1,0 +1,1 @@
+chrome-extension://dgjbaljgolmlcmmklmmeafecikidmjpi/rulesets/scripting/declarative/hun-0.js

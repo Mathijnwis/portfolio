@@ -1,0 +1,1 @@
+chrome-extension://dgjbaljgolmlcmmklmmeafecikidmjpi/rulesets/scripting/scriptlet/tur-0.abort-on-property-write.js

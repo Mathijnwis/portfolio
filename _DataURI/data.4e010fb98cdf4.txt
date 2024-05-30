@@ -1,0 +1,1 @@
+chrome-extension://dgjbaljgolmlcmmklmmeafecikidmjpi/rulesets/scripting/declarative/nld-0.js

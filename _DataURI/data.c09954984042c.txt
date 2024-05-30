@@ -1,0 +1,1 @@
+chrome-extension://dgjbaljgolmlcmmklmmeafecikidmjpi/rulesets/scripting/declarative/nor-0.js
