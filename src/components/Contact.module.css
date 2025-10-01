@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+.contact {
+  padding: 5rem 10%; /* Increased padding */
+  text-align: center;
+  background-color: #1a1a1a; /* Consistent dark background */
+  color: #e0e0e0;
+  font-family: 'Inter', sans-serif;
+}
+
+.contact h2 {
+  margin-bottom: 1.5rem; /* More space below heading */
+  font-size: 3rem; /* Larger heading */
+  font-weight: 700;
+  color: #e0e0e0;
+  letter-spacing: -0.03em;
+}
+
+.contact p {
+  max-width: 700px; /* Wider for better text flow */
+  margin: 0 auto 3rem auto; /* More margin */
+  line-height: 1.8;
+  font-size: 1.15rem; /* Slightly larger text */
+  color: #b0b0b0; /* Softer grey for body text */
+}
+
+.emailButton {
+  display: inline-block;
+  padding: 1rem 2.5rem; /* More padding */
+  background-color: #88ccff; /* Softer blue */
+  color: #1a1a1a; /* Dark text on blue */
+  border-radius: 8px; /* More rounded corners */
+  text-decoration: none;
+  font-size: 1.1rem; /* Slightly larger font */
+  font-weight: 600; /* Medium bold */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  margin-bottom: 3rem; /* More space below button */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.emailButton:hover {
+  background-color: #aaddff; /* Lighter on hover */
+  transform: translateY(-3px); /* Subtle lift effect */
+  box-shadow: 0 8px 20px rgba(136, 204, 255, 0.4); /* Blue glow on hover */
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem; /* Increased gap */
+}
+
+.socialLinks a {
+  color: #c0c0c0; /* Softer white */
+  text-decoration: none;
+  font-size: 1.2rem; /* Larger social links */
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.socialLinks a:hover {
+  color: #88ccff; /* Accent color on hover */
+  transform: translateY(-3px); /* Subtle lift */
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 3rem 5%;
+  }
+  .contact h2 {
+    font-size: 2.5rem;
+  }
+  .contact p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .emailButton {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .socialLinks {
+    gap: 1.5rem;
+  }
+  .socialLinks a {
+    font-size: 1.1rem;
+  }
+}

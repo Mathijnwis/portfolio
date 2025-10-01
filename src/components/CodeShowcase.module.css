@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap'); /* For code snippets */
+
+.showcaseSection {
+  padding: 5rem 5%; /* Increased padding */
+  background-color: #121212; /* Darker background for contrast */
+  color: #e0e0e0;
+  font-family: 'Inter', sans-serif;
+}
+
+.showcaseSection h2 {
+  text-align: center;
+  font-size: 3rem; /* Larger heading */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+}
+
+.intro {
+  text-align: center;
+  max-width: 800px; /* Wider for intro text */
+  margin: 0 auto 4rem auto; /* More margin */
+  color: #b0b0b0;
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.codeSnippet {
+  background-color: #1a1a1a; /* Consistent dark card background */
+  border-radius: 12px; /* More rounded corners */
+  padding: 2.5rem; /* Increased padding */
+  margin-bottom: 3.5rem; /* More space between snippets */
+  max-width: 1000px; /* Wider snippets */
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* More pronounced shadow */
+}
+
+.codeSnippet h3 {
+  margin-top: 0;
+  color: #88ccff; /* Softer blue accent */
+  font-size: 1.8rem; /* Larger snippet title */
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.codeSnippet p {
+  color: #c0c0c0; /* Softer grey for description */
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 2rem; /* Space before code block */
+}
+
+.codeBlock {
+  border-radius: 8px; /* More rounded corners for code block */
+  overflow: hidden;
+  margin-top: 2rem; /* More margin above code */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for code block */
+}
+
+/* Override default styles from the library to ensure it fits perfectly */
+.codeBlock pre {
+  margin: 0 !important;
+  border-radius: 8px !important; /* Apply new border-radius to pre */
+  font-size: 0.95rem !important; /* Slightly larger code font */
+  line-height: 1.6 !important;
+  font-family: 'Fira Code', monospace !important; /* Modern monospace font */
+}
+
+@media (max-width: 768px) {
+  .showcaseSection {
+    padding: 3rem 3%;
+  }
+  .showcaseSection h2 {
+    font-size: 2.5rem;
+  }
+  .intro {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+  .codeSnippet {
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .codeSnippet h3 {
+    font-size: 1.5rem;
+  }
+  .codeSnippet p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  .codeBlock pre {
+    font-size: 0.85rem !important;
+  }
+}

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 90vh; /* Taller hero section */
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('../assets/images/hero-background.jpg'); /* Slightly darker overlay */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 3rem; /* Increased padding */
+  font-family: 'Inter', sans-serif;
+}
+
+.heroContent h1 {
+  font-size: 4.8rem; /* Larger title */
+  margin-bottom: 0.8rem; /* More space below name */
+  color: #e0e0e0; /* White for main name */
+  font-weight: 700;
+  letter-spacing: -0.05em; /* Tighter letter spacing */
+}
+
+.heroContent p {
+  font-size: 1.8rem; /* Larger subtitle */
+  margin-bottom: 3.5rem; /* More space below subtitle */
+  color: #88ccff; /* Softer blue for "Game Developer" */
+  font-weight: 300; /* Lighter weight for subtitle */
+}
+
+.ctaButton {
+  display: inline-block; /* Ensure it's a block for padding */
+  padding: 1rem 3rem; /* More padding */
+  background-color: #88ccff; /* Softer blue */
+  color: #1a1a1a; /* Dark text on blue */
+  border: none;
+  border-radius: 8px; /* More rounded corners */
+  text-decoration: none;
+  font-size: 1.2rem; /* Larger font */
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.ctaButton:hover {
+  background-color: #aaddff; /* Lighter on hover */
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 10px 25px rgba(136, 204, 255, 0.4); /* Blue glow on hover */
+}
+
+@media (max-width: 992px) {
+  .heroContent h1 {
+    font-size: 3.5rem;
+  }
+  .heroContent p {
+    font-size: 1.5rem;
+  }
+  .ctaButton {
+    padding: 0.9rem 2.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+    padding: 2rem;
+  }
+  .heroContent h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.7rem;
+  }
+  .heroContent p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+  .ctaButton {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}
