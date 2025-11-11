@@ -3,7 +3,14 @@ import { useParams, Link } from 'react-router-dom';
 import { games } from '../data/gameData';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import styles from './GameDetailPage.module.css'; // Make sure this path is correct
+import styles from './GameDetailPage.module.css';
+
+const toPublic = (p) => {
+  if (!p) return '';
+  if (/^https?:\/\//i.test(p)) return p;
+  const trimmed = p.replace(/^\/+/, '');
+  return `${process.env.PUBLIC_URL}/${trimmed}`;
+};
 
 const GameDetailPage = () => {
   const { slug } = useParams();
@@ -21,8 +28,7 @@ const GameDetailPage = () => {
 
   return (
     <div className={styles.detailPage}>
-      <Link to="/#games" className={styles.backLink}> Back to Portfolio</Link>
-      
+      <Link to="/" className={styles.backLink}>Back to Portfolio</Link>
       <h1>{game.title}</h1>
       <p className={styles.longDescription}>{game.details.longDescription}</p>
 
@@ -42,17 +48,17 @@ const GameDetailPage = () => {
             </SyntaxHighlighter>
           </div>
         </div>
-        
+
         <div className={styles.rightColumn}>
           <h3>Gallery</h3>
           <div className={styles.gallery}>
             {game.details.gallery.map((img, index) => (
-              <img key={index} src={img} alt={`${game.title} screenshot ${index + 1}`} />
+              <img key={index} src={toPublic(img)} alt={`${game.title} screenshot ${index + 1}`} />
             ))}
           </div>
           <div className={styles.links}>
-             <a href={game.gameLink} target="_blank" rel="noopener noreferrer" className={styles.button}>Play on Itch.io</a>
-             {game.sourceLink && <a href={game.sourceLink} target="_blank" rel="noopener noreferrer" className={styles.buttonSecondary}>Source Code</a>}
+            <a href={game.gameLink} target="_blank" rel="noopener noreferrer" className={styles.button}>Play on Itch.io</a>
+            {game.sourceLink && <a href={game.sourceLink} target="_blank" rel="noopener noreferrer" className={styles.buttonSecondary}>Source Code</a>}
           </div>
         </div>
       </div>
