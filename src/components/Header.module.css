@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
 .header {
-  background-color: #1a1a1a; /* Darker header */
-  padding: 1.2rem 5%; /* More vertical padding */
+  background-color: #1a1a1a;
+  padding: 1.2rem 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #2a2a2a; /* Subtle border */
+  border-bottom: 1px solid #2a2a2a;
   font-family: 'Inter', sans-serif;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
-  font-size: 1.8rem; /* Larger logo text */
+  font-size: 1.8rem;
   font-weight: 700;
-  color: #88ccff; /* Softer blue for logo */
-  text-decoration: none; /* In case it becomes a link */
+  color: #88ccff;
+  text-decoration: none;
   letter-spacing: -0.03em;
 }
 
@@ -24,37 +24,40 @@
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 2.5rem; /* Increased gap between links */
+  gap: 2.5rem;
 }
 
-.navLinks a {
-  color: #c0c0c0; /* Softer white for links */
-  text-decoration: none;
-  font-size: 1.1rem; /* Slightly larger font */
+.navButton {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 1.1rem;
   font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  color: #c0c0c0;
+  cursor: pointer;
+  position: relative;
   transition: color 0.3s ease, transform 0.2s ease;
-  position: relative; /* For underline effect */
 }
 
-.navLinks a:hover {
-  color: #88ccff; /* Accent color on hover */
-  transform: translateY(-2px); /* Subtle lift */
+.navButton:hover {
+  color: #88ccff;
+  transform: translateY(-2px);
 }
 
-/* Modern Underline Effect on Hover */
-.navLinks a::after {
+.navButton::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -5px; /* Position below text */
+  bottom: -5px;
   width: 0;
   height: 2px;
-  background-color: #88ccff; /* Accent color for underline */
+  background-color: #88ccff;
   transition: width 0.3s ease-in-out;
 }
 
-.navLinks a:hover::after,
-.navLinks a.active::after { /* Add .active for current page */
+.navButton:hover::after,
+.navButtonActive::after {
   width: 100%;
 }
 
@@ -64,13 +67,16 @@
     padding: 1rem 5%;
     gap: 1rem;
   }
+
   .logo {
     font-size: 1.5rem;
   }
+
   .navLinks {
     gap: 1.5rem;
   }
-  .navLinks a {
+
+  .navButton {
     font-size: 1rem;
   }
 }

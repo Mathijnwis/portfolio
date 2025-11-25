@@ -8,10 +8,21 @@ import Contact from '../components/Contact';
 const HomePage = () => {
   return (
     <main>
-      <Hero />
-      <About />
-      <GamesGrid />
-      <Contact />
+      <section id="hero">
+        <Hero />
+      </section>
+
+      <section id="about">
+        <About />
+      </section>
+
+      <section id="games">
+        <GamesGrid />
+      </section>
+
+      <section id="contact">
+        <Contact />
+      </section>
     </main>
   );
 };
