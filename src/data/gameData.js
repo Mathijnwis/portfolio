@@ -18,28 +18,28 @@ export const games = [
         "/images/game1-gallery2.png",
       ],
       whatILearned: [
-        "How to design and implement a grid-based level editor system.",
-        "Optimizing asset loading and object instantiation for the WiiU's hardware.",
-        "Developing for a unique platform with specific input methods (GamePad touch screen).",
-        "Managing save/load functionality for user-generated content."
+        "How to fix getting touch input coordinates correctly on the WiiU GamePad.",
+        "Optimizing small things for better performance.",
+        "How to use both gamepad and tv screen.",
+        "Using / making custom grid systems."
       ],
       featuredCode: {
         language: 'csharp',
         code: `
             private void HandleWiiUInput()
-{
-    GamePadState currentState = GamePad.access.state;
-    if (currentState.touch.validity == TouchValidity.Valid)
-    {
-        const float GAMEPAD_WIDTH = 852.0f, GAMEPAD_HEIGHT = 480.0f; 
-        float normalizedX = currentState.touch.x / GAMEPAD_WIDTH; 
-        float normalizedY = 1f - (currentState.touch.y / GAMEPAD_HEIGHT); 
-        Vector3 screenPoint = new Vector3(normalizedX * Screen.width, normalizedY * Screen.height, 0);
+            {
+                GamePadState currentState = GamePad.access.state;
+                if (currentState.touch.validity == TouchValidity.Valid)
+                {
+                    const float GAMEPAD_WIDTH = 852.0f, GAMEPAD_HEIGHT = 480.0f; 
+                    float normalizedX = currentState.touch.x / GAMEPAD_WIDTH; 
+                    float normalizedY = 1f - (currentState.touch.y / GAMEPAD_HEIGHT); 
+                    Vector3 screenPoint = new Vector3(normalizedX * Screen.width, normalizedY * Screen.height, 0);
 
-        Vector2 worldPoint = mainCam.ScreenToWorldPoint(screenPoint);
-        HandleInteraction(worldPoint, isDeleting || currentState.IsPressed(GamePadButton.X));
-    }
-}
+                    Vector2 worldPoint = mainCam.ScreenToWorldPoint(screenPoint);
+                    HandleInteraction(worldPoint, isDeleting || currentState.IsPressed(GamePadButton.X));
+                }
+            }
         `
       }
     }
@@ -58,10 +58,9 @@ export const games = [
         "/images/game6.png"
       ],
       whatILearned: [
-        "Implementing multiple distinct minigame modes within one project.",
+        "First time working with the (new) Input System.",
         "Handling local multiplayer input with multiple controllers.",
-        "Designing quick, replayable gameplay loops.",
-        "Balancing mechanics for fairness in competitive play."
+        "Using Objects over multiple scenes."
       ],
       featuredCode: {
         language: 'csharp',
@@ -104,10 +103,9 @@ export const games = [
         "/images/game2.png"
       ],
       whatILearned: [
-        "Integrating Photon for real-time online multiplayer.",
-        "Synchronizing randomized mechanics across clients.",
-        "Managing authoritative server vs. client prediction in fast shooters.",
-        "Creating weapon systems with flexible modular stats."
+        "Using Photon for real-time online multiplayer.",
+        "Synchronizing Times over different clients.",
+        "Creating weapons with recoil,spread."
       ],
       featuredCode: {
         language: 'csharp',
@@ -154,9 +152,8 @@ export const games = [
         "/images/game3-gallery3.png"
       ],
       whatILearned: [
-        "Integrating Photon for real-time online multiplayer.",
-        "Synchronizing the block and money.",
-        "first time working with Photon.",
+        "How to synchronize the money cubes and Buildings.",
+        "First time working with Photon.",
         "Added discord rich presence(show on discord what ur playing) "
       ],
       featuredCode: {
@@ -207,7 +204,7 @@ export const games = [
         "/images/game7-gallery2.png"
       ],
       whatILearned: [
-        "Synchronizing player anmation online.",
+        "Synchronizing player animation's online.",
         "Making a close combat fight system.",
         "Making a gambling machine."
       ],
